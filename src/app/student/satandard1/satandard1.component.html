@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>Student Management</h2>
+    <table width="100%" style="border: 1px solid #ddd;" class="table text-center data-table">
+        <tr>
+            <th class="text-left">ID</th>
+            <th class="text-left">title</th>
+            <th class="text-left">Name</th>
+            <th class="text-left">Address</th>
+            <th class="text-left">City</th>
+            <th class="text-left">State</th>
+            <th class="text-left">Country</th>
+        </tr>
+    <tr *ngFor="let studentRecords of studentArr">
+        <td>{{studentRecords.Id}}</td>
+        <td class="text-left"> {{studentRecords.title}}</td> 
+        <td class="text-left"> {{studentRecords.Name}}</td> 
+        <td class="text-left"> {{studentRecords.Address}}</td> 
+        <td class="text-left"> {{studentRecords.City}}</td> 
+        <td class="text-left"> {{studentRecords.State}}</td> 
+        <td class="text-left"> {{studentRecords.Country}}</td> 
+    </tr>
+    </table>
+</div>    
