@@ -1,9 +1,10 @@
 export interface Student {
-    id : number, 
-    title:string,
-    Name : string,
-    Address : string,
-    City: string,
-    State: string,
-    Country: string 
+    Id: number;
+    Name: string;
+    Address: {
+      Address1: string;
+      City: string;
+      State: string;
+      Country: string;
+    };
 }

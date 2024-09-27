@@ -3,21 +3,17 @@
     <table width="100%" border="1"  class="table text-center data-table">
         <tr>
             <th class="text-left">Roll No</th>
-            <th class="text-left">title</th>
             <th class="text-left">Name</th>
-            <th class="text-left">Address</th>
             <th class="text-left">City</th>
             <th class="text-left">State</th>
             <th class="text-left">Country</th>
         </tr>
-    <tr *ngFor="let studentRecords of studentArr" (click)="viewDetails(studentRecords.id)">        
-        <td>{{studentRecords.id}}</td>
-        <td class="text-left"> {{studentRecords.title}}</td> 
+    <tr *ngFor="let studentRecords of studentArr" (click)="viewDetails(studentRecords.Id)">        
+        <td>{{studentRecords.Id}}</td> 
         <td class="text-left"> {{studentRecords.Name}}</td> 
-        <td class="text-left"> {{studentRecords.Address}}</td> 
-        <td class="text-l  eft"> {{studentRecords.City}}</td> 
-        <td class="text-left"> {{studentRecords.State}}</td> 
-        <td class="text-left"> {{studentRecords.Country}}</td> 
+        <td class="text-l  eft"> {{studentRecords.Address.City}}</td> 
+        <td class="text-left"> {{studentRecords.Address.State}}</td> 
+        <td class="text-left"> {{studentRecords.Address.Country}}</td> 
     </tr>
     </table>
 </div>    

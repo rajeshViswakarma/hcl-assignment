@@ -19,13 +19,18 @@ export class Satandard1Component implements OnInit {
   }
 
   private fetchStudentRecords(): void {
+    console.log('Fetching student records...');
     this._SService.getStudentRecord().subscribe({
-      next:  (data: Student[]) => {
+      next: (data: Student[]) => {
+        console.log('Student records fetched:', data);
         this.studentArr = data;
       },
-      error: () => {console.error('Error: Unable to fetching student records');}     
+      error: (error) => { 
+        console.error('Error: Unable to fetch student records', error);
+      }     
     });
   }
+  
   viewDetails(id: number): void {
     this.router.navigate(['student-view-record', id]);
   }
