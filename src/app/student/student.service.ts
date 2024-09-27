@@ -30,7 +30,7 @@ getStudentRecord(): Observable<Student[]> {
 }
 
 // Get student by ID
-getStudent(Id: number): Student | undefined {
-  return this.students.find(val => val.Id === Id);
-}
+  getStudent(Id: number): Student | undefined {
+    return this.students.find(val => val.Id === Id);
+  }
 }

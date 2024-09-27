@@ -9,15 +9,12 @@ import { Router } from '@angular/router';
 })
 export class Satandard1Component implements OnInit {
 
-
   public studentArr: Student[] = []; 
-
   constructor(private _SService: StudentService,private router: Router) { }
-
   ngOnInit(): void {
     this.fetchStudentRecords();
   }
-
+// fetch the student record
   private fetchStudentRecords(): void {
     console.log('Fetching student records...');
     this._SService.getStudentRecord().subscribe({
@@ -30,7 +27,7 @@ export class Satandard1Component implements OnInit {
       }     
     });
   }
-  
+// fetch view details
   viewDetails(id: number): void {
     this.router.navigate(['student-view-record', id]);
   }

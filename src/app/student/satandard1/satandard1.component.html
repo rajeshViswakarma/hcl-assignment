@@ -2,18 +2,18 @@
     <h2 class="text-center">Student Management</h2>
     <table width="100%" border="1"  class="table text-center data-table">
         <tr>
-            <th class="text-left">Roll No</th>
-            <th class="text-left">Name</th>
-            <th class="text-left">City</th>
-            <th class="text-left">State</th>
-            <th class="text-left">Country</th>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Country</th>
         </tr>
-    <tr *ngFor="let studentRecords of studentArr" (click)="viewDetails(studentRecords.Id)">        
-        <td>{{studentRecords.Id}}</td> 
-        <td class="text-left"> {{studentRecords.Name}}</td> 
-        <td class="text-l  eft"> {{studentRecords.Address.City}}</td> 
-        <td class="text-left"> {{studentRecords.Address.State}}</td> 
-        <td class="text-left"> {{studentRecords.Address.Country}}</td> 
-    </tr>
+        <tr *ngFor="let studentRecords of studentArr" (click)="viewDetails(studentRecords.Id)">        
+            <td>{{studentRecords.Id}}</td> 
+            <td> {{studentRecords.Name}}</td> 
+            <td> {{studentRecords.Address.City}}</td> 
+            <td> {{studentRecords.Address.State}}</td> 
+            <td> {{studentRecords.Address.Country}}</td> 
+        </tr>
     </table>
 </div>    
