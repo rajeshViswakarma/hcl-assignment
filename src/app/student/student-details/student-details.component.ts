@@ -9,18 +9,21 @@ import { StudentService } from '../student.service';
   styleUrls: ['./student-details.component.css']
 })
 export class StudentDetailsComponent implements OnInit {
-
-  student: Student | undefined;
+  Istudent: Student | undefined;
 
   constructor(
-    private route: ActivatedRoute,
-    private studentService: StudentService
+    private studentService: StudentService,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
-    const id = +this.route.snapshot.paramMap.get('Id')!;
-    this.studentService.getStudentRecord().subscribe(data => {
-      this.student = data.find(student => student.Id === id);
+    this.route.params.subscribe(param => {
+      const id = +param['id']; // Convert string ID to number
+      this.Istudent = this.studentService.getStudent(id);
+      
+      if (!this.Istudent) {
+        console.warn(`Student with ID ${id} not found`);
+      }
     });
   }
 }

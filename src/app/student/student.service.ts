@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import { Student } from './student';
 import { Router } from '@angular/router';
 
@@ -20,14 +20,13 @@ export class StudentService {
   
   constructor(private http : HttpClient, private router: Router) { }
 
-// Fetch the data from json api
-  getStudentRecord() : Observable<Student[]>{
-     return this.http.get<Student[]>(this._url);
-  }
+// Fetch the data from json api and store it
+getStudentRecord(): Observable<Student[]> {
+  return this.http.get<Student[]>(this._url).pipe(tap(data => this.students = data));
+}
 
-  // show details from record
-  viewDetails(id: number): void {
-    this.router.navigate(['/student-view-record', id]);
-  }
-
+// Get student by ID
+getStudent(id: number): Student | undefined {
+  return this.students.find(val => val.id === id);
+}
 }

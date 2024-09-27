@@ -7,12 +7,11 @@ import { Satandard3Component } from './student/satandard3/satandard3.component';
 import { StudentDetailsComponent } from './student/student-details/student-details.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
   { path: 'satandard1', component: Satandard1Component },
   { path: 'satandard2', component: Satandard2Component },
   { path: 'satandard3', component: Satandard3Component },  
-  { path: 'student-view-record', component: StudentDetailsComponent },
-  { path: '**', redirectTo: 'home' }
+  { path: 'student-view-record/:id', component: StudentDetailsComponent },  
+  { path: '**', redirectTo: 'satandard1' }
 ];
 
 @NgModule({

@@ -1,11 +1,15 @@
 <div class="container">
     <h2 class="text-center">Student Management</h2>
-   
-<div *ngIf="student">
-    <h2>Student Details</h2>
-    <p>ID: {{ student.Id }}</p>
-    <p>Title: {{ student.title }}</p>
-    <p>Completed: {{ student.Name }}</p>
-  </div>
-
-  </div>
+     <h3>Student details</h3>
+    <div *ngIf="Istudent">
+      <p><strong>ID:</strong> {{ Istudent.id }}</p>
+      <p><strong>Name:</strong> {{ Istudent.Name }}</p>
+      <p><strong>Title:</strong> {{ Istudent.title }}</p>     
+      <p><strong>Address:</strong> {{ Istudent.Address }}</p>
+      <p><strong>City:</strong> {{ Istudent.City }}</p>
+      <p><strong>State:</strong> {{ Istudent.State }}</p>
+      <p><strong>Country:</strong> {{ Istudent.Country }}</p>
+    </div>
+ 
+<div><a routerLink="/satandard1">Back to student record</a></div>
+</div>

@@ -27,6 +27,6 @@ export class Satandard1Component implements OnInit {
     });
   }
   viewDetails(id: number): void {
-    this.router.navigate(['/student-view-record', id]);
+    this.router.navigate(['student-view-record', id]);
   }
 }
