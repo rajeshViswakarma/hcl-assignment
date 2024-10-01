@@ -7,16 +7,15 @@ import { AppComponent } from './app.component';
 import { Satandard1Component } from './student/satandard1/satandard1.component';
 import { Satandard2Component } from './student/satandard2/satandard2.component';
 import { Satandard3Component } from './student/satandard3/satandard3.component';
-import { HomeComponent } from './home/home.component';
 import { StudentDetailsComponent } from './student/student-details/student-details.component';
-
+import {NavigationComponent} from './navigation/navigation.component';
 @NgModule({
   declarations: [
     AppComponent,
+    NavigationComponent,
     Satandard1Component,
     Satandard2Component,
     Satandard3Component,
-    HomeComponent,
     StudentDetailsComponent
   ],
   imports: [
